@@ -1,0 +1,3 @@
+[submodule "drivers/SDHI"]
+	path = drivers/SDHI
+	url = https://github.com/mbedNoobNinja/SDHI

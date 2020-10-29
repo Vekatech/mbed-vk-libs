@@ -1,0 +1,26 @@
+{
+    "name": "cam",
+    "config": {
+        "NONE": {
+            "help": "N/A",
+            "value": "CAMERA_NONE"
+        },
+        "OV7725": {
+            "help": "QVGA/VGA [640x480] (YUV2)",
+            "value": "CAMERA_OV7725"
+        },
+        "OV7740": {
+            "help": "QVGA/VGA [640x480] (YUV2)",
+            "value": "CAMERA_OV7740"
+        },
+        "BOARD": "MBED_CONF_CAM_NONE"
+    },
+    "target_overrides": {
+        "VK_RZ_A1H": {
+            "BOARD": "MBED_CONF_CAM_OV7725"
+        },
+        "VK_RZ_A1LU": {
+            "BOARD": "MBED_CONF_CAM_OV7725"
+        }
+    }
+}

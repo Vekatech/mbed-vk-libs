@@ -1,0 +1,31 @@
+{
+    "name": "lcd",
+    "config": {
+        "PANEL_NONE": {
+            "help": "N/A",
+            "value": 0
+        },
+        "PANEL_VKLCD50RTA": {
+            "help": "HVGA [480x272] (RGB 565)",
+            "value": null
+        },
+        "PANEL_VKLCD70RT": {
+            "help": "WSVGA [1024x600] (LVDS)",
+            "value": null
+        },
+        "PANEL_VKLVDS_HDMI": {
+            "help": "WXGA [1280x800] (LVDS)",
+            "value": null
+        },
+        "BOARD": "MBED_CONF_LCD_PANEL_NONE"
+    },
+    "target_overrides": {
+        "VK_RZ_A1H": {
+            "PANEL_NONE": "PANEL_NONE",
+            "PANEL_VKLCD50RTA": "PANEL_VKLCD50RTA",
+            "PANEL_VKLCD70RT": "PANEL_VKLCD70RT",
+            "PANEL_VKLVDS_HDMI": "PANEL_VKLVDS_HDMI",
+            "BOARD": "MBED_CONF_LCD_PANEL_VKLCD50RTA"
+        }
+    }
+}
