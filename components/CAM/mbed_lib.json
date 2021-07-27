@@ -21,6 +21,9 @@
         },
         "VK_RZ_A1LU": {
             "BOARD": "MBED_CONF_CAM_OV7725"
+        },
+        "VK_RZ_A1R3": {
+            "BOARD": "MBED_CONF_CAM_OV7725"
         }
     }
 }

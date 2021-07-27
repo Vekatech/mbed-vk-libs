@@ -197,6 +197,23 @@ static DisplayBase::graphics_error_t camera_init(DisplayBase& Display, uint16_t 
     ThisThread::sleep_for(10 + 1);
     rstb = 1;
     ThisThread::sleep_for(1 + 1);
+#elif defined(TARGET_VK_RZ_A1R3)
+    PinName cmos_camera_pin[] = {
+        /* data pin */
+        P6_12, P6_13, P6_14, P6_15, P1_8, P1_9, P1_10, P1_11,
+        /* control pin */
+        P7_8,       /* DV0_CLK   */
+        P7_9,       /* DV0_Vsync */
+        P7_10       /* DV0_Hsync */
+    };
+    DigitalOut pwdn(P6_11);
+    DigitalOut rstb(P7_11);
+
+    pwdn = 0;
+    rstb = 0;
+    ThisThread::sleep_for(10 + 1);
+    rstb = 1;
+    ThisThread::sleep_for(1 + 1);
   #endif
 
     /* camera input port setting */

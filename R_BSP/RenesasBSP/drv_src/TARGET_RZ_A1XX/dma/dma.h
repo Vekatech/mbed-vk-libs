@@ -93,6 +93,7 @@ Macro definitions
 #define CHCTRL_SET_CLRTC       (0x00000040U)
 #define CHCTRL_SET_CLREND      (0x00000020U)
 #define CHCTRL_SET_SWRST       (0x00000008U)
+#define CHCTRL_SET_STG         (0x00000004U)
 #define CHCTRL_SET_CLREN       (0x00000002U)
 #define CHCTRL_SET_SETEN       (0x00000001U)
 /* CHCFG */

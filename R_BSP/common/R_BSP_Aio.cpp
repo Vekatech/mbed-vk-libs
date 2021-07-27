@@ -89,7 +89,7 @@ int32_t R_BSP_Aio::read(void * const p_data, uint32_t data_size, const rbsp_data
         data_conf.p_app_data    = &sync_info;
 
         if (aio_trans(p_ctl, p_data, data_size, &data_conf) == ESUCCESS) {
-            p_sem_wait->wait(osWaitForever);
+            p_sem_wait->try_acquire_for(osWaitForever);
         }
         delete p_sem_wait;
     }
@@ -113,7 +113,7 @@ int32_t R_BSP_Aio::read(void * const p_data, uint32_t data_size, const rbsp_data
 
     if ((p_data_conf == NULL) || (p_data == NULL)) {
         wk_errno = ENOSPC_RBSP;
-    } else if (p_ctl->p_sem_ctl->wait(osWaitForever) == -1) {
+    } else if (p_ctl->p_sem_ctl->try_acquire_for(osWaitForever) == -1) {
         wk_errno = EIO_RBSP;
     } else {
         p_rbsp_aio = (AIOCB *)p_ctl->p_aio_top + p_ctl->index;

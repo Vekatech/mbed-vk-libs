@@ -40,6 +40,7 @@ Includes   <System Includes> , "Project Includes"
 #if R_OSPL_IS_PREEMPTION
 #include  "cmsis_os.h"
 #include  "r_ospl_RTX_private.h"
+#include  "rtx_lib.h"
 #endif
 
 
@@ -99,7 +100,7 @@ errnum_t  R_OSPL_Initialize( const void *const  in_NullConfig )
 ************************************************************************/
 r_ospl_thread_id_t  R_OSPL_THREAD_GetCurrentId(void)
 {
-    return  osThreadGetId();
+    return (IsIrqMode() || IsIrqMasked()) ? NULL :  osThreadGetId();
 }
 
 

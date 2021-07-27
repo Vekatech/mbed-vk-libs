@@ -8,7 +8,7 @@
 #if	defined(TARGET_VK_RZ_A1H)
 #define CAM_SCL 	P1_2
 #define CAM_SDA		P1_3
-#elif   defined(TARGET_VK_RZ_A1LU)
+#elif   (defined(TARGET_VK_RZ_A1LU) || defined(TARGET_VK_RZ_A1R3))
 #define CAM_SCL 	P1_6
 #define CAM_SDA		P1_7
 #else

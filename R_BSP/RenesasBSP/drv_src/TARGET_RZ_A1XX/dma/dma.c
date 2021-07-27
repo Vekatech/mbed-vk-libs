@@ -903,6 +903,9 @@ void DMA_Start(const int_t channel, const bool_t restart_flag)
     /* start DMA transfer */
     gb_info_drv.info_ch[channel].p_dma_ch_reg->CHCTRL_n = CHCTRL_SET_SETEN;
 
+    /* software */
+    gb_info_drv.info_ch[channel].p_dma_ch_reg->CHCTRL_n |= CHCTRL_SET_STG;
+
     /* set channel status to DMA_CH_TRANSFER */
     gb_info_drv.info_ch[channel].ch_stat = DMA_CH_TRANSFER;
 

@@ -83,7 +83,7 @@ union											\
 
   #define CAMERA_MODULE             MODULE_VDC
 
-  #if (defined(TARGET_VK_RZ_A1H) || defined(TARGET_VK_RZ_A1LU))
+  #if (defined(TARGET_VK_RZ_A1H) || defined(TARGET_VK_RZ_A1LU) || defined(TARGET_VK_RZ_A1R3))
     #if MBED_CONF_CAM_BOARD == CAMERA_OV7725
       #include "OV7725_config.h"
     #elif MBED_CONF_CAM_BOARD == CAMERA_OV7740

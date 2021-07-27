@@ -78,10 +78,17 @@ static const PinMap PinMap_DV_INPUT_PIN[] = {
     {P1_10 , VDC5_CH0, 4}, /* DV0_DATA6  */
     {P1_9  , VDC5_CH0, 4}, /* DV0_DATA5  */
     {P1_8  , VDC5_CH0, 4}, /* DV0_DATA4  */
+#ifdef TARGET_VK_RZ_A1R3
+    {P6_15 , VDC5_CH0, 6}, /* DV0_DATA3  */
+    {P6_14 , VDC5_CH0, 6}, /* DV0_DATA2  */
+    {P6_13 , VDC5_CH0, 6}, /* DV0_DATA1  */
+    {P6_12 , VDC5_CH0, 6}, /* DV0_DATA0  */
+#else
     {P1_3  , VDC5_CH0, 4}, /* DV0_DATA3  */
     {P1_2  , VDC5_CH0, 4}, /* DV0_DATA2  */
     {P1_1  , VDC5_CH0, 4}, /* DV0_DATA1  */
     {P1_0  , VDC5_CH0, 4}, /* DV0_DATA0  */
+#endif
     {NC    , NC   , 0}
 };
 

@@ -15,6 +15,8 @@ using namespace Vekatech;
 
 #ifndef MBED_CONF_LCD_BOARD
 #error [NOT_SUPPORTED] No LCD support for this target.
+#elif (MBED_CONF_LCD_BOARD == MBED_CONF_LCD_PANEL_NONE)
+#error [NOT_SUPPORTED] No LCD support for this target.
 #else
 
 
